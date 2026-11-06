@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroSoporte - Mantenimiento e Incidencias</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>MicroSoporte</h1>
+        <p>Servicios de mantenimiento y soporte informático</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Planes de mantenimiento</h2>
+
+            <div class="tabla-contenedor">
+                <table class="tabla-planes">
+
+                    <caption>Comparativa de planes de mantenimiento (precios sin IVA)</caption>
+
+                    <thead>
+                        <tr>
+                            <th rowspan="2" scope="col">Servicio incluido</th>
+                            <th colspan="3" scope="colgroup">Plan contratado</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Básico</th>
+                            <th scope="col" class="destacado">Profesional</th>
+                            <th scope="col">Empresa</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">Precio mensual</th>
+                            <td>19 €</td>
+                            <td class="destacado">49 €</td>
+                            <td>129 €</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Equipos cubiertos</th>
+                            <td>1</td>
+                            <td class="destacado">Hasta 5</td>
+                            <td>Hasta 25</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Soporte remoto</th>
+                            <td>L–V, 9:00–14:00</td>
+                            <td class="destacado">L–V, 8:00–20:00</td>
+                            <td>24 h · 7 días</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Visita presencial</th>
+                            <td>No</td>
+                            <td class="destacado">1 al mes</td>
+                            <td>Ilimitadas</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Copias de seguridad</th>
+                            <td>No</td>
+                            <td class="destacado">Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Antivirus gestionado</th>
+                            <td>Sí</td>
+                            <td class="destacado">Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Tiempo de respuesta</th>
+                            <td>48 h</td>
+                            <td class="destacado">8 h</td>
+                            <td>1 h</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                Permanencia mínima de 6 meses. Precios válidos hasta el 31 de diciembre de 2026.
+                            </td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Registro de incidencias del mes</h2>
+
+            <div class="tabla-contenedor">
+                <table class="tabla-incidencias">
+
+                    <caption>Incidencias registradas durante el mes</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">N.º</th>
+                            <th scope="col">Cliente</th>
+                            <th scope="col">Equipo</th>
+                            <th scope="col">Técnico</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Horas</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1041</td>
+                            <td>Clínica Dental Sol</td>
+                            <td>Portátil</td>
+                            <td>Marcos</td>
+                            <td><span class="estado estado--resuelta">Resuelta</span></td>
+                            <td>2,5</td>
+                        </tr>
+
+                        <tr>
+                            <td>1042</td>
+                            <td>Gestoría Alba</td>
+                            <td>Impresora</td>
+                            <td>Lucía</td>
+                            <td><span class="estado estado--resuelta">Resuelta</span></td>
+                            <td>1,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>1043</td>
+                            <td>Panadería Trigo</td>
+                            <td>TPV</td>
+                            <td>Marcos</td>
+                            <td><span class="estado estado--curso">En curso</span></td>
+                            <td>3,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>1044</td>
+                            <td>Taller Hermanos Gil</td>
+                            <td>Router</td>
+                            <td></td>
+                            <td><span class="estado estado--pendiente">Pendiente</span></td>
+                            <td>0,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>1045</td>
+                            <td>Academia Nova</td>
+                            <td>Sobremesa</td>
+                            <td>Lucía</td>
+                            <td><span class="estado estado--curso">En curso</span></td>
+                            <td>4,5</td>
+                        </tr>
+
+                        <tr>
+                            <td>1046</td>
+                            <td>Bufete Ríos</td>
+                            <td>Servidor NAS</td>
+                            <td></td>
+                            <td><span class="estado estado--pendiente">Pendiente</span></td>
+                            <td>0,0</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Total de horas</td>
+                            <td>11,0</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>MicroSoporte - Servicios informáticos y mantenimiento</p>
+    </footer>
+
+</body>
+</html>

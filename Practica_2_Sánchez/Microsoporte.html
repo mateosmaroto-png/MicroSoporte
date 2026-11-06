@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroSoporte - Mantenimiento e Incidencias</title>
+
+    <style>
+        /* CONFIGURACIÓN GENERAL */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f4f8;
+            color: #333;
+        }
+
+        /* CABECERA Y PIE */
+
+        header {
+            background-color: #183153;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-bottom: 0;
+        }
+
+        footer {
+            background-color: #183153;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        /* CONTENIDO */
+
+        main {
+            width: 95%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #183153;
+            border-bottom: 2px solid #183153;
+            padding-bottom: 10px;
+        }
+
+        /* CONTENEDOR RESPONSIVE */
+
+        .tabla-contenedor {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        /* TABLAS */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: white;
+        }
+
+        caption {
+            font-weight: bold;
+            padding: 12px;
+            color: #183153;
+            caption-side: top;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+
+        /* CABECERAS */
+
+        thead {
+            background-color: #183153;
+            color: white;
+        }
+
+        thead th {
+            background-color: #183153;
+            color: white;
+        }
+
+        /* PRIMERA COLUMNA */
+
+        .tabla-planes tbody th {
+            text-align: left;
+            background-color: #e8edf4;
+        }
+
+        /* COLUMNA PROFESIONAL RECOMENDADA */
+
+        .destacado {
+            background-color: #fff3cd;
+            font-weight: bold;
+        }
+
+        thead .destacado {
+            background-color: #d49b24;
+            color: #183153;
+        }
+
+        thead .destacado::after {
+            content: "★ Recomendado";
+            display: block;
+            font-size: 11px;
+            margin-top: 6px;
+            color: #183153;
+        }
+
+        /* EFECTO HOVER */
+
+        .tabla-planes tbody tr:hover {
+            background-color: #dce9f7;
+        }
+
+        .tabla-planes tbody tr:hover td,
+        .tabla-planes tbody tr:hover th {
+            background-color: #dce9f7;
+        }
+
+        /* PIE DE TABLAS */
+
+        tfoot {
+            background-color: #e8edf4;
+            font-weight: bold;
+        }
+
+        tfoot td {
+            padding: 14px;
+        }
+
+        /* TABLA DE INCIDENCIAS */
+
+        .tabla-incidencias tbody tr:nth-child(even) {
+            background-color: #edf2f7;
+        }
+
+        /* ÚLTIMA COLUMNA A LA DERECHA */
+
+        .tabla-incidencias th:last-child,
+        .tabla-incidencias td:last-child {
+            text-align: right;
+        }
+
+        /* CELDAS VACÍAS */
+
+        .tabla-incidencias td:empty::before {
+            content: "Sin asignar";
+            color: #888;
+            font-style: italic;
+        }
+
+        /* ESTADOS */
+
+        .estado {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .estado--resuelta {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .estado--curso {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .estado--pendiente {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        /* PIE DE INCIDENCIAS */
+
+        .tabla-incidencias tfoot {
+            background-color: #183153;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>MicroSoporte</h1>
+        <p>Servicios de mantenimiento y soporte informático</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Planes de mantenimiento</h2>
+
+            <div class="tabla-contenedor">
+                <table class="tabla-planes">
+
+                    <caption>Comparativa de planes de mantenimiento (precios sin IVA)</caption>
+
+                    <thead>
+                        <tr>
+                            <th rowspan="2" scope="col">Servicio incluido</th>
+                            <th colspan="3" scope="colgroup">Plan contratado</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Básico</th>
+                            <th scope="col" class="destacado">Profesional</th>
+                            <th scope="col">Empresa</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">Precio mensual</th>
+                            <td>19 €</td>
+                            <td class="destacado">49 €</td>
+                            <td>129 €</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Equipos cubiertos</th>
+                            <td>1</td>
+                            <td class="destacado">Hasta 5</td>
+                            <td>Hasta 25</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Soporte remoto</th>
+                            <td>L–V, 9:00–14:00</td>
+                            <td class="destacado">L–V, 8:00–20:00</td>
+                            <td>24 h · 7 días</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Visita presencial</th>
+                            <td>No</td>
+                            <td class="destacado">1 al mes</td>
+                            <td>Ilimitadas</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Copias de seguridad</th>
+                            <td>No</td>
+                            <td class="destacado">Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Antivirus gestionado</th>
+                            <td>Sí</td>
+                            <td class="destacado">Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Tiempo de respuesta</th>
+                            <td>48 h</td>
+                            <td class="destacado">8 h</td>
+                            <td>1 h</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                Permanencia mínima de 6 meses. Precios válidos hasta el 31 de diciembre de 2026.
+                            </td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Registro de incidencias del mes</h2>
+
+            <div class="tabla-contenedor">
+                <table class="tabla-incidencias">
+
+                    <caption>Incidencias registradas durante el mes</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">N.º</th>
+                            <th scope="col">Cliente</th>
+                            <th scope="col">Equipo</th>
+                            <th scope="col">Técnico</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Horas</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1041</td>
+                            <td>Clínica Dental Sol</td>
+                            <td>Portátil</td>
+                            <td>Marcos</td>
+                            <td><span class="estado estado--resuelta">Resuelta</span></td>
+                            <td>2,5</td>
+                        </tr>
+
+                        <tr>
+                            <td>1042</td>
+                            <td>Gestoría Alba</td>
+                            <td>Impresora</td>
+                            <td>Lucía</td>
+                            <td><span class="estado estado--resuelta">Resuelta</span></td>
+                            <td>1,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>1043</td>
+                            <td>Panadería Trigo</td>
+                            <td>TPV</td>
+                            <td>Marcos</td>
+                            <td><span class="estado estado--curso">En curso</span></td>
+                            <td>3,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>1044</td>
+                            <td>Taller Hermanos Gil</td>
+                            <td>Router</td>
+                            <td></td>
+                            <td><span class="estado estado--pendiente">Pendiente</span></td>
+                            <td>0,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>1045</td>
+                            <td>Academia Nova</td>
+                            <td>Sobremesa</td>
+                            <td>Lucía</td>
+                            <td><span class="estado estado--curso">En curso</span></td>
+                            <td>4,5</td>
+                        </tr>
+
+                        <tr>
+                            <td>1046</td>
+                            <td>Bufete Ríos</td>
+                            <td>Servidor NAS</td>
+                            <td></td>
+                            <td><span class="estado estado--pendiente">Pendiente</span></td>
+                            <td>0,0</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Total de horas</td>
+                            <td>11,0</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>MicroSoporte - Servicios informáticos y mantenimiento</p>
+    </footer>
+
+</body>
+</html>

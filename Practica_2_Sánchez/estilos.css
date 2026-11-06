@@ -1,0 +1,209 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f4f8;
+    color: #333;
+}
+
+/* CABECERA Y PIE DE PÁGINA */
+
+header {
+    background-color: #183153;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: #183153;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+main {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #183153;
+    border-bottom: 2px solid #183153;
+    padding-bottom: 10px;
+}
+
+/* CONTENEDOR RESPONSIVE */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* ESTILOS GENERALES DE TABLAS */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white;
+}
+
+caption {
+    font-weight: bold;
+    padding: 12px;
+    color: #183153;
+    caption-side: top;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+/* CABECERAS */
+
+thead {
+    background-color: #183153;
+    color: white;
+}
+
+thead th {
+    background-color: #183153;
+    color: white;
+}
+
+/* PRIMERA COLUMNA DE LA TABLA 1 */
+
+.tabla-planes tbody th {
+    text-align: left;
+    background-color: #e8edf4;
+}
+
+/* COLUMNA RECOMENDADA */
+
+.destacado {
+    background-color: #fff3cd;
+    font-weight: bold;
+}
+
+thead .destacado {
+    background-color: #d49b24;
+    color: #183153;
+}
+
+/* ETIQUETA RECOMENDADO */
+
+thead .destacado::after {
+    content: "★ Recomendado";
+    display: block;
+    font-size: 11px;
+    margin-top: 6px;
+    color: #183153;
+}
+
+/* EFECTO HOVER TABLA 1 */
+
+.tabla-planes tbody tr:hover {
+    background-color: #dce9f7;
+}
+
+.tabla-planes tbody tr:hover td,
+.tabla-planes tbody tr:hover th {
+    background-color: #dce9f7;
+}
+
+/* PIE DE TABLA 1 */
+
+tfoot {
+    background-color: #e8edf4;
+    font-weight: bold;
+}
+
+tfoot td {
+    padding: 14px;
+}
+
+/* TABLA DE INCIDENCIAS: EFECTO CEBRA */
+
+.tabla-incidencias tbody tr:nth-child(even) {
+    background-color: #edf2f7;
+}
+
+/* ÚLTIMA COLUMNA ALINEADA A LA DERECHA */
+
+.tabla-incidencias th:last-child,
+.tabla-incidencias td:last-child {
+    text-align: right;
+}
+
+/* CELDAS VACÍAS */
+
+.tabla-incidencias td:empty::before {
+    content: "Sin asignar";
+    color: #888;
+    font-style: italic;
+}
+
+/* INSIGNIAS DE ESTADO */
+
+.estado {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ESTADO RESUELTA */
+
+.estado--resuelta {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* ESTADO EN CURSO */
+
+.estado--curso {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* ESTADO PENDIENTE */
+
+.estado--pendiente {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* PIE DE LA TABLA DE INCIDENCIAS */
+
+.tabla-incidencias tfoot {
+    background-color: #183153;
+    color: white;
+}
